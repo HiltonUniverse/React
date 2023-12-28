@@ -1,0 +1,43 @@
+.App {
+    text-align: center;
+}
+
+.box {
+    max-width: 200px;
+    margin: auto;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    padding: 10px;
+    margin-top: 50px;
+}
+
+p {
+    font-size: 18px;
+    text-align: center;
+}
+
+.add {
+    width: 50px;
+    height: 40px;
+    background-color: red;
+    border-width: 0px;
+    border-radius: 5px;
+    margin: 20px;
+}
+
+.sub {
+    width: 50px;
+    height: 40px;
+    background-color: blanchedalmond;
+    border-width: 0px;
+    border-radius: 5px;
+    margin: 20px
+}
+
+.reset {
+    width: 55px;
+    height: 40px;
+    background-color: pink;
+    border-width: 0px;
+    border-radius: 5px;
+}
