@@ -1,32 +1,34 @@
+import "./App.css"
 import { useState } from "react";
 
-import "./App.css"
+const initialState = [
+  { id: 1, name: "Recording Lecture", completed: true },
+  { id: 2, name: "Edit React Lecture", completed: false },
+  { id: 3, name: "Upload React Lecture", completed: false }
+]
 
-export default function App() {
-  const [count, setCount] = useState(0);
+const App = () => {
+  const [tasks, setTask] = useState(
+    initialState
+  )
 
-  function handleAdd() {
-    setCount(count + 1)
-    setCount((count) => count + 1)
-  }
-
-  function handleSub() {
-    if (count <= 0) {
-      return;
-    }
-
-    setCount(count - 1)
+  function handleDelete(taskId) {
+    setTask(tasks.filter((task) => task.id !== taskId))
   }
 
   return (
     <div className="App">
-      <div className="box">
-        <p>{count}</p>
-        <button onClick={handleAdd} className="add">ADD</button>
-        <button onClick={handleSub} className="sub">SUB</button>
-        {/* Using react arrow function */}
-        <button onClick={() => { setCount(0) }} className="reset">RESET</button>
-      </div>
+      <h1>Task List</h1>
+      <ul>
+        {tasks.map((task) => ( //iterate through each elemtn in the tasks array
+          <li key={task.id}> {/*give each list item an unique id*/}
+            <span>{task.id} - {task.name}</span> {/*pass arrow function to onclick function so the function handleDelete is called only*/}
+            <button onClick={() => { handleDelete(task.id) }} className="delete">Delete</button> {/*when the button is clicked*/}
+          </li>
+        ))}
+      </ul>
     </div>
   )
 }
+
+export default App;
