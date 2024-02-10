@@ -1,11 +1,11 @@
 import { useState } from "react";
 import "./ProductList.css"
 import { useFetch } from "../hooks/useFetch";
-
+import Loading from '../assets/loading.gif'
 export const ProductList = () => {
-    const [url, setUrl] = useState("http://localhost:8000/products");
+    const [url, setUrl] = useState("http://localhost:8000/products/");
     //use custom hook, get it's data and rename it as products.
-    const { data: products, loading } = useFetch(url);
+    const { data: products, loading, error } = useFetch(url);
 
     return (
         <section>
@@ -14,8 +14,8 @@ export const ProductList = () => {
                 <button onClick={() => setUrl("http://localhost:8000/products?in_stock=true")}>In Stock</button>
             </div>
 
-            {loading && <p className="loading">Loading products...</p>}
-
+            {loading && <p className="loading"><img src={Loading} alt="" /></p>}
+            {error && <p className="error">{error}</p>}
             {
                 products && products.map((product) => {
                     return <div className="card" key={product.id}>
