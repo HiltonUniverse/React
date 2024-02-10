@@ -1,0 +1,65 @@
+.card {
+    max-width: 500px;
+    margin: 15px auto;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.card .id {
+    background-color: #4e06a0;
+    font-size: 12px;
+    color: #FFFFFF;
+    border-radius: 5px;
+    margin: 10px auto;
+    padding: 5px;
+    /* this is causing the container to wrap the text
+    also the container adapts with the size of the text */
+    display: inline;
+}
+
+.card .info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+    align-items: center;
+}
+
+.card .instock {
+    background-color: rgb(55, 148, 55);
+    color: white;
+    border-radius: 5px;
+    margin: 0px 5px 5px 5px;
+    padding: 5px 5px;
+}
+
+.card .unavailable {
+    background-color: rgb(198, 64, 64);
+    color: white;
+    border-radius: 5px;
+    margin: 0px 5px 5px 5px;
+    padding: 5px 5px;
+}
+
+.card .name {
+    margin: 20px 0px;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+button {
+    border: 0px;
+    background-color: #0c68a1;
+    border-radius: 5px;
+    color: white;
+    margin: 0px 10px 10px 0px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 15px;
+    display: inline-block;
+}
+
+.filter {
+    display: flex;
+    justify-content: center;
+}
