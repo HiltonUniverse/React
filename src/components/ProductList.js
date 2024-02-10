@@ -5,7 +5,7 @@ import { useFetch } from "../hooks/useFetch";
 export const ProductList = () => {
     const [url, setUrl] = useState("http://localhost:8000/products");
     //use custom hook, get it's data and rename it as products.
-    const { data: products } = useFetch(url);
+    const { data: products, loading } = useFetch(url);
 
     return (
         <section>
@@ -13,6 +13,9 @@ export const ProductList = () => {
                 <button onClick={() => setUrl("http://localhost:8000/products")}>All</button>
                 <button onClick={() => setUrl("http://localhost:8000/products?in_stock=true")}>In Stock</button>
             </div>
+
+            {loading && <p className="loading">Loading products...</p>}
+
             {
                 products && products.map((product) => {
                     return <div className="card" key={product.id}>

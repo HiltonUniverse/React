@@ -63,3 +63,8 @@ button {
     display: flex;
     justify-content: center;
 }
+
+.loading {
+    display: flex;
+    justify-content: center;
+}
