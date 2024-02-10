@@ -1,19 +1,11 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import "./ProductList.css"
+import { useFetch } from "../hooks/useFetch";
 
 export const ProductList = () => {
-    const [products, setProducts] = useState([]);
     const [url, setUrl] = useState("http://localhost:8000/products");
-
-    //get the products info from our json database
-    //run a function a single time or when [dependency] changes, in this case everytime url is updated
-    //fetch is recalled
-    useEffect(() => {
-        fetch(url)
-            .then(response => response.json())
-            .then(data => setProducts(data))
-
-    }, [url])
+    //use custom hook, get it's data and rename it as products.
+    const { data: products } = useFetch(url);
 
     return (
         <section>
@@ -22,7 +14,7 @@ export const ProductList = () => {
                 <button onClick={() => setUrl("http://localhost:8000/products?in_stock=true")}>In Stock</button>
             </div>
             {
-                products.map((product) => {
+                products && products.map((product) => {
                     return <div className="card" key={product.id}>
                         <p className="id">{product.id}</p>
                         <p className="name">{product.name}</p>
