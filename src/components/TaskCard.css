@@ -1,0 +1,30 @@
+.taskList li {
+    font: 16px;
+    list-style: none;
+    margin: 20px 5px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    border-radius: 5px;
+    padding: 10px;
+    /*all items are placed in a single horizontal line*/
+    display: flex;
+    /*Space between items in the list delegate, we can do justify-content because we set the display*/
+    justify-content: space-between;
+    align-items: center;
+}
+
+.taskList li.completed {
+    box-shadow: rgb(62, 150, 0) 0px 1px 4px;
+}
+
+.taskList li.incomplete {
+    box-shadow: rgba(135, 20, 0, 0.689) 0px 1px 4px;
+}
+
+.taskList button.delete {
+    border: 0px;
+    border-radius: 5px;
+    background-color: var(--theme-button-delete);
+    color: #FFFFFF;
+    padding: 5px 10px;
+    cursor: pointer;
+}
