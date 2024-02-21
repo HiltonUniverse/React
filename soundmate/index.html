@@ -8,22 +8,76 @@
     <title>SoundMate - Learning Tailwind with examples</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="./index.js"></script>
+    <script rel="stylesheet" href="./styles.css"></script>
 </head>
 
 <body>
-    <div class="min-w-64">
-        <h1 class="text-4xl bg-emerald-300 
-        hover:bg-emerald-200 
-        hover:text-fuchsia-600 
-        hover:cursor-pointer 
-        text-center 
-        py-8 m-4 border-4 
-        rounded-md border-indigo-600">Learning Tailwind
-        </h1>
+    <div class="max-w-7xl m-auto">
+        <header class="h-38 sm:h-32 border-b max-sm:mx-2">
+            <div class="flex flex-col sm:flex-row justify-between items-center">
+                <div class="flex items-center">
+                    <img class="w-20 rounded-md" src="./images/luffy.jpg" alt="SoundMate Logo">
+                    <span class="ml-2 text-2xl font-bold">SoundMate</span>
+                </div>
+                <nav class="my-4">
+                    <span class="p-2 text-2xl hover:bg-gray-100 hover:rounded hover:cursor-pointer">Home</span>
+                    <span class="p-2 text-2xl hover:bg-gray-100 hover:rounded hover:cursor-pointer">Products</span>
+                    <span class="p-2 text-2xl hover:bg-gray-100 hover:rounded hover:cursor-pointer">About us</span>
+                </nav>
+            </div>
+        </header>
 
-        <p class="bg-emerald-200 md:max-lg:bg-red-500 text-4xl rounded-md text-center m-4 py-2 select-none">Hello World!</p>
+        <main>
+            <section class="text-center my-12">
+                <h1 class="max-sm:text-3xl text-4xl">Lorem, ipsum dolor.</h1>
+                <p class="max-sm:text-lg text-xl mt-2 mb-7">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                <button class="text-lg text-slate-50 border-2 p-2 rounded-lg bg-logo-700 hover:bg-logo-800">Know More</button>
+            </section>
 
-        <p class="bg-logo-700 dark:text-logo-400">Learning <span class="font-medium text-3xl text-sky-400">tailwindcss</span> with Hilton!</p>
+            <section>
+                <div class="flex justify-center flex-wrap">
+                    <div class="hover:bg-gray-300 max-w-sm m-3 border rounded-md p-3 hover:cursor-pointer">
+                        <img class="w-96 rounded-md" src="./images/product.jpg" alt="Headphone">
+                        <h1 class="text-2xl my-5">Blue Ridge Hemp</h1>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque saepe corporis, fuga nemo blanditiis architecto.</p>
+                    </div>
+
+                    <div class="hover:bg-gray-300 max-w-sm m-3 border rounded-md p-3 hover:cursor-pointer">
+                        <img class="w-96 rounded-md" src="./images/product.jpg" alt="Headphone">
+                        <h1 class="text-2xl my-5">Blue Ridge Hemp</h1>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque saepe corporis, fuga nemo blanditiis architecto.</p>
+                    </div>
+
+                    <div class="hover:bg-gray-300 max-w-sm m-3 border rounded-md p-3 hover:cursor-pointer">
+                        <img class="w-96 rounded-md" src="./images/product.jpg" alt="Headphone">
+                        <h1 class="text-2xl my-5">Blue Ridge Hemp</h1>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque saepe corporis, fuga nemo blanditiis architecto.</p>
+                    </div>
+
+                    <div class="hover:bg-gray-300 max-w-sm m-3 border rounded-md p-3 hover:cursor-pointer">
+                        <img class="w-96 rounded-md" src="./images/product.jpg" alt="Headphone">
+                        <h1 class="text-2xl my-5">Blue Ridge Hemp</h1>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque saepe corporis, fuga nemo blanditiis architecto.</p>
+                    </div>
+
+                    <div class="hover:bg-gray-300 max-w-sm m-3 border rounded-md p-3 hover:cursor-pointer">
+                        <img class="w-96 rounded-md" src="./images/product.jpg" alt="Headphone">
+                        <h1 class="text-2xl my-5">Blue Ridge Hemp</h1>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque saepe corporis, fuga nemo blanditiis architecto.</p>
+                    </div>
+
+                    <div class="hover:bg-gray-300 max-w-sm m-3 border rounded-md p-3 hover:cursor-pointer">
+                        <img class="w-96 rounded-md" src="./images/product.jpg" alt="Headphone">
+                        <h1 class="text-2xl my-5">Blue Ridge Hemp</h1>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque saepe corporis, fuga nemo blanditiis architecto.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="text-center border-t-2 py-4 mt-7">
+            <p class="text-lg text-slate-900 font-bold">LearningTailwind-2023</p>
+        </footer>
     </div>
 </body>
 
