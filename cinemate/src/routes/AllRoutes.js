@@ -1,4 +1,4 @@
-import {Routex, Route, Routes} from "react-router-dom"
+import {Route, Routes} from "react-router-dom"
 import { MovieList, MovieDetail, Search, PageNotFound } from "../pages"
 
 export const AllRoutes = () => {
