@@ -9,3 +9,10 @@
   padding: 0px;
   font-family: "Poppins", sans-serif;
 }
+
+main{
+  max-width: 1280px;
+  margin: auto;
+  min-height: 90vh;
+  padding: 10px;
+}
