@@ -1,8 +1,11 @@
 import { Link } from "react-router-dom"
+import { useCart } from "../context/CardContext";
 
 
 export const HomeCard = ({ item }) => {
     const { title, price, imageSource } = item;
+
+    const { addToCart } = useCart();
 
     return (
 
@@ -16,7 +19,7 @@ export const HomeCard = ({ item }) => {
                 </Link>
                 <div className="flex justify-between">
                     <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">${price}</p>
-                    <span className="text-white bg-sky-600 rounded p-2 cursor-pointer hover:bg-sky-700">Add To Cart</span>
+                    <span className="text-white bg-sky-600 rounded p-2 cursor-pointer hover:bg-sky-700" onClick={() => addToCart(item)}>Add To Cart</span>
                 </div>
             </div>
         </div>
