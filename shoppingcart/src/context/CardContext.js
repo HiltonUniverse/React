@@ -24,6 +24,7 @@ export const CartProvider = ({ children }) => {
     const addToCart = (product) => {
         //This does not update the state.cartList, we only created a new cartList our of the old one with a new product added to it.
         const updatedCartList = state.cartList.concat(product);
+        updateTotal(updatedCartList)
         dispatch({
             type: "ADD_TO_CART", //this is the type of action we want to perform, we implement the specifics in the cardReducer
             payload: { //this is the new state that will be passed to ADD_To_CART function in reducer
@@ -34,10 +35,22 @@ export const CartProvider = ({ children }) => {
 
     const removeFromCart = (product) => {
         const updatedCartList = state.cartList.filter(current => current.id !== product.id);
+        updateTotal(updatedCartList)
         dispatch({
             type: "REMOVE_FROM_CART",
             payload: {
                 products: updatedCartList
+            }
+        })
+    }
+
+    const updateTotal = (products) => {
+        let total = 0;
+        products.forEach(product => total = total + product.price)
+        dispatch({
+            type: "UPDATE_TOTAL",
+            payload: {
+                total: total
             }
         })
     }
