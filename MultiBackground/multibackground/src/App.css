@@ -1,0 +1,48 @@
+/* SectionOne.css */
+* {
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+.section-one {
+  background-image: url("./Assets/imageOne.avif");
+  /* Additional styling for Section One */
+  width: 80%;
+  /* Set the width to 100% */
+  height: 50vh;
+  z-index: -1;
+  margin: auto;
+  background-size: cover;
+  /* Ensure the background image covers the entire container */
+  background-position: center;
+  /* Center the background image */
+  background-repeat: no-repeat;
+  /* Prevent tiling of the background image */
+  background-attachment: fixed;
+  /* Ensure the background image remains fixed */
+
+}
+
+/* SectionTwo.css */
+.section-two {
+  background-image: url('./Assets/imageTwo.jpg');
+  width: 80%;
+  height: 50vh;
+  margin: 55px auto;
+  z-index: -2;
+  background-size: cover;
+  /* Ensure the background image covers the entire container */
+  background-position: center;
+  /* Center the background image */
+  background-repeat: no-repeat;
+  /* Prevent tiling of the background image */
+  background-attachment: fixed;
+  /* Ensure the background image remains fixed */
+}
+
+h2 {
+  color: white;
+  margin: auto;
+  contain: flex;
+}
